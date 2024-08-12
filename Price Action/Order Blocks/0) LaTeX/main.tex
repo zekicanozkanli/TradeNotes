@@ -1,0 +1,77 @@
+\documentclass[article]{report}
+
+% Basic packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, proof, array}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{centernot, lastpage, fancyhdr, pgfplots, svg, enumitem, float, dsfont, setspace}
+\usepackage[Bjarne]{fncychap}
+\usepackage{tocloft}
+
+
+\newgeometry{
+top=0.75in,
+bottom=0.75in,
+outer=0.8in,
+inner=0.8in,
+}
+
+\pagestyle{fancy}
+
+\newcommand{\sectionn}[1]{
+  \section*{#1}
+  \addcontentsline{toc}{section}{#1}
+}
+
+\lhead{Notes on Price Action}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\pgfplotsset{compat=1.18, width=10cm}
+
+\begin{document}
+
+\onehalfspacing
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+            
+        \Huge
+        \textbf{Notes on Price Action}
+
+        \vspace{0.5cm}
+        
+        \Large
+        Order Block 
+            
+        \vspace{6cm}
+
+        \LARGE
+        Zeki Can Özkanlı
+                
+        \vfill
+            
+        \vspace{0.8cm}
+
+        \Large
+        9 August 2024
+        
+        \vspace{0.5cm}
+        
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\include{explanation}
+\include{strategy}
+\include{failed_examples}
+\include{backtests}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography} 
+
+\end{document}
